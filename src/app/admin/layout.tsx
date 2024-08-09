@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import Sidebar from "@/components/common/Sidebar/Sidebar";
 import { Layout } from "antd";
-import { Header, Footer, Content } from "antd/es/layout/layout";
+import { Footer, Content } from "antd/es/layout/layout";
 import Navbar from "@/components/common/Navbar/Navbar";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <AntdRegistry>
           <Layout className="h-dvh">
             <Sidebar />
